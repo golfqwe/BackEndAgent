@@ -233,17 +233,11 @@ export default {
   head () {
     return {
       script: [
-        // {
-        //   src: 'libs/apexcharts/apexcharts.min.js',
-        //   async: true,
-        //   defer: true,
-        //   callback: () => { console.log('apexcharts script loaded'); this.showChart = true }
-        // },
-
         {
           src: 'js/pages/dashboard_index.init.js',
           async: true,
-          defer: true
+          defer: true,
+          callback: () => { this.$forceUpdate() }
         }
       ],
       link: [
@@ -263,9 +257,7 @@ export default {
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      console.log('1 :>> ', 1)
-    })
+
   },
   methods: {
     renderChart () {

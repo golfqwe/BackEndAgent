@@ -532,7 +532,120 @@
 
 <script>
 export default {
-
+  head () {
+    return {
+      script: [
+        {
+          src: '/libs/datatables.net/js/jquery.dataTables.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-buttons/js/dataTables.buttons.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/jszip/jszip.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/pdfmake/build/pdfmake.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/pdfmake/build/vfs_fonts.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-buttons/js/buttons.html5.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-buttons/js/buttons.print.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-buttons/js/buttons.colVis.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-keytable/js/dataTables.keyTable.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-select/js/dataTables.select.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-responsive/js/dataTables.responsive.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/js/pages/list-member-agent.init.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        }
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: '/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: '/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: '/libs/datatables.net-select-bs4/css//select.bootstrap4.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: '/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css'
+        }
+      ]
+    }
+  }
 }
 </script>
 

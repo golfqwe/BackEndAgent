@@ -21,9 +21,6 @@ export default {
         src: '/libs/bootstrap/js/bootstrap.bundle.min.js'
       },
       {
-        src: '/libs/metismenu/metisMenu.min.js'
-      },
-      {
         src: '/libs/simplebar/simplebar.min.js'
       },
       {
@@ -31,15 +28,6 @@ export default {
       },
       {
         src: '/libs/jquery-sparkline/jquery.sparkline.min.js'
-      },
-      // {
-      //   src: 'https://maps.google.com/maps/api/js?key=AIzaSyCtSAR45TFgZjOs4nBFFZnII-6mMHLfSYI'
-      // },
-      {
-        src: '/js/app.js'
-      },
-      {
-        // src: 'js/ajax.js'
       }
     ],
     link: [

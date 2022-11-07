@@ -207,11 +207,31 @@
                   <li>
                     <a href="javascript: void(0);" class="has-arrow">Report</a>
                     <ul class="sub-menu" aria-expanded="false">
-                      <li><a href="report-winlose">Winlose</a></li>
-                      <li><a href="report-winlose-senior">Win/lose-Senior</a></li>
-                      <li><a href="report-winlose-master">Win/lose-Master</a></li>
-                      <li><a href="report-winlose-agent">Win/lose-Agent</a></li>
-                      <li><a href="report-winlose-player">Win/lose-Player</a></li>
+                      <li>
+                        <NuxtLink to="/member/report/">
+                          Winlose
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/report/winlose-senior">
+                          Win/lose-Senior
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/report/winlose-master">
+                          Win/lose-Master
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/report/winlose-agent">
+                          Win/lose-Agent
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/report/winlose-player">
+                          Win/lose-Player
+                        </NuxtLink>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -220,37 +240,45 @@
                   <li>
                     <a href="javascript: void(0);" class="has-arrow">Top Player</a>
                     <ul class="sub-menu" aria-expanded="false">
-                      <li><a href="topplayer">Top Winner/loser/Valid Amount</a></li>
+                      <li>
+                        <NuxtLink to="/member/topPlayer/">
+                          Top Winner/loser/Valid Amount
+                        </NuxtLink>
+                      </li>
                     </ul>
                   </li>
                 </ul>
                 <ul class="sub-menu" aria-expanded="false">
-                  <li><a href="performance-report">Performance</a></li>
+                  <li>
+                    <NuxtLink to="/member/performance">
+                      Performance
+                    </NuxtLink>
+                  </li>
                 </ul>
               </li><li>
-                <a href="check-deposit-withdraw" class="waves-effect">
+                <NuxtLink to="/check-deposit-withdraw" class="waves-effect">
                   <i class="ri-money-dollar-box-line" /><span
                     class="badge rounded-pill bg-success float-end"
                   />
                   <span>Check Deposit - Withdraw</span>
-                </a>
+                </NuxtLink>
               </li>
               <li>
-                <a href="invoice" class="waves-effect">
+                <NuxtLink to="/invoice" class="waves-effect">
                   <i class="ri-bill-line" /><span
                     class="badge rounded-pill bg-success float-end"
                   />
                   <span>Invoice</span>
-                </a>
+                </NuxtLink>
               </li>
 
               <li>
-                <a href="log" class="waves-effect">
+                <NuxtLink to="/log" class="waves-effect">
                   <i class="ri-edit-box-fill" /><span
                     class="badge rounded-pill bg-success float-end"
                   />
                   <span>Logs</span>
-                </a>
+                </NuxtLink>
               </li>
             </ul>
           </div>
@@ -282,13 +310,61 @@
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay" />
-    </div>
   </body>
 </template>
 
 <script>
 export default {
-
+  head () {
+    return {
+      script: [
+        {
+          src: '/libs/jquery/jquery.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/metismenu/metisMenu.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/libs/simplebar/simplebar.min.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        },
+        {
+          src: '/js/app.js',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
+        }
+        // {
+        //   src: '/js/ajax.js',
+        //   async: true,
+        //   defer: true,
+        //   callback: () => { this.$forceUpdate() }
+        // }
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css'
+        }
+      ]
+    }
+  }
 }
 </script>
 
