@@ -11,8 +11,10 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "apexcharts": "^3.35.3",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "vue-apexcharts": "^1.6.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

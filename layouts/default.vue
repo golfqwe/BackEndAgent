@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <body data-sidebar="dark">
     <!-- Begin page -->
     <div id="layout-wrapper">
       <header id="page-topbar">
@@ -7,7 +7,7 @@
           <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-              <a href="index" class="logo logo-dark">
+              <a href="/" class="logo logo-dark">
                 <span class="logo-sm">
                   <img src="~/assets/images/logo-sm-dark.png" alt="logo-sm-dark" height="35">
                 </span>
@@ -16,7 +16,7 @@
                 </span>
               </a>
 
-              <a href="index" class="logo logo-light">
+              <a href="/" class="logo logo-light">
                 <span class="logo-sm">
                   <img src="~/assets/images/logo-sm-light.png" alt="logo-sm-light" height="35">
                 </span>
@@ -132,12 +132,12 @@
               </li>
 
               <li>
-                <a href="index" class="waves-effect">
+                <NuxtLink to="/" class="waves-effect">
                   <i class="ri-dashboard-line" /><span
                     class="badge rounded-pill bg-success float-end"
                   />
                   <span>Dashboard</span>
-                </a>
+                </NuxtLink>
               </li>
 
               <li>
@@ -146,7 +146,11 @@
                   <span>Profile</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                  <li><a href="account_information">Account information</a></li>
+                  <li>
+                    <NuxtLink to="/profile/accountInformation">
+                      Account information
+                    </NuxtLink>
+                  </li>
                 </ul>
               </li>
 
@@ -159,8 +163,16 @@
                   <li>
                     <a href="javascript: void(0);" class="has-arrow">List master Agent</a>
                     <ul class="sub-menu" aria-expanded="false">
-                      <li><a href="list-member-agent">List master Agent</a></li>
-                      <li><a href="addnew-agent">Add new master agent</a></li>
+                      <li>
+                        <NuxtLink to="/member/listMasterAgent/">
+                          List master Agent
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/listMasterAgent/addNewAgent">
+                          Add new master agent
+                        </NuxtLink>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -168,10 +180,26 @@
                   <li>
                     <a href="javascript: void(0);" class="has-arrow">PT/comm Summary</a>
                     <ul class="sub-menu" aria-expanded="false">
-                      <li><a href="pt-comm-sport">Sport</a></li>
-                      <li><a href="pt-comm-livecasino">Live Casino</a></li>
-                      <li><a href="pt-comm-lottery">Lottery</a></li>
-                      <li><a href="pt-comm-game">Game</a></li>
+                      <li>
+                        <NuxtLink to="/member/PT/sport">
+                          Sport
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/PT/livecasino">
+                          Live Casino
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/PT/lottery">
+                          Lottery
+                        </NuxtLink>
+                      </li>
+                      <li>
+                        <NuxtLink to="/member/PT/game">
+                          Game
+                        </NuxtLink>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -239,12 +267,23 @@
         <Nuxt />
       </div>
       <!-- end main content-->
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              {{ new Date().getFullYear() }} © Backend
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- END layout-wrapper -->
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay" />
-  </div>
+    </div>
+  </body>
 </template>
 
 <script>

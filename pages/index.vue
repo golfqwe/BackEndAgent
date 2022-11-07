@@ -155,8 +155,8 @@
                 Member Online
               </h4>
 
-              <div id="donut-user-chart" class="apex-charts" />
-
+              <!-- <div id="donut-user-chart" class="apex-charts" /> -->
+              <apexchart type="donut" :options="chartOptions" :series="series" class="apex-charts" />
               <div class="row">
                 <div class="col-4">
                   <div class="text-center mt-4">
@@ -190,5 +190,86 @@
 
 <script>
 export default {
+  data () {
+    return {
+      showChart: false,
+
+      series: [42, 26],
+      chartOptions: {
+        chart: {
+          height: 'auto',
+          type: 'donut'
+        },
+        labels: ['Agent', 'Member'],
+        plotOptions: {
+          pie: {
+            donut: {
+              size: '75%'
+            }
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              show: false
+            }
+          }
+        }],
+        dataLabels: {
+          enabled: false
+        },
+        legend: {
+          show: false
+        },
+        colors: ['#5664d2', '#1cbb8c', '#eeb902']
+
+      }
+    }
+  },
+  head () {
+    return {
+      script: [
+        // {
+        //   src: 'libs/apexcharts/apexcharts.min.js',
+        //   async: true,
+        //   defer: true,
+        //   callback: () => { console.log('apexcharts script loaded'); this.showChart = true }
+        // },
+
+        {
+          src: 'js/pages/dashboard_index.init.js',
+          async: true,
+          defer: true
+        }
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css'
+        }
+      ]
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      console.log('1 :>> ', 1)
+    })
+  },
+  methods: {
+    renderChart () {
+    }
+  }
 }
 </script>
