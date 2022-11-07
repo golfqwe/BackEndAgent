@@ -1,5 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  ssr: false,
+  debug: true,
   head: {
     title: 'BackEndAgent',
     htmlAttrs: {
@@ -18,7 +20,10 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/app.min.css'
+    '~/assets/css/app.css',
+    '~/assets/css/custom.css',
+    '~/assets/css/bootstrap.min.css',
+    '~/assets/css/icons.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

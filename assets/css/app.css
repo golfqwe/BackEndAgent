@@ -5,28 +5,28 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../fonts/inter-light.woff2?v=3.13") format("woff2"), url("../fonts/inter-light.woff?v=3.13") format("woff"); }
+  src: url("~assets/fonts/inter-light.woff2") format("woff2"), url("~assets/fonts/inter-light.woff") format("woff"); }
 
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/inter-regular.woff2?v=3.13") format("woff2"), url("../fonts/inter-regular.woff?v=3.13") format("woff"); }
+  src: url("~assets/fonts/inter-regular.woff2") format("woff2"), url("~assets/fonts/inter-regular.woff") format("woff"); }
 
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/inter-medium.woff2?v=3.13") format("woff2"), url("../fonts/inter-medium.woff?v=3.13") format("woff"); }
+  src: url("~assets/fonts/inter-medium.woff2") format("woff2"), url("~assets/fonts/inter-medium.woff") format("woff"); }
 
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/inter-bold.woff2?v=3.13") format("woff2"), url("../fonts/iter-bold.woff?v=3.13") format("woff"); }
+  src: url("~assets/fonts/inter-bold.woff2") format("woff2"), url("~assets/fonts/inter-bold.woff") format("woff"); }
 
 #page-topbar {
   position: fixed;
@@ -2891,7 +2891,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td {
   background-color: #fff; }
 
 .authentication-bg {
-  background-image: url("../images/authentication-bg.jpg");
+  background-image: url("~assets/images/authentication-bg.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center; }
@@ -3436,7 +3436,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td {
   width: 25%; }
 
 .comingsoon-bg {
-  background-image: url("../images/comingsoon-bg.jpg"); }
+  background-image: url("~assets/images/comingsoon-bg.jpg"); }
 
 /************** vertical timeline **************/
 .timeline {
