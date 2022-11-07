@@ -13,6 +13,35 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
+    script: [
+      {
+        src: 'libs/jquery/jquery.min.js'
+      },
+      {
+        src: 'libs/bootstrap/js/bootstrap.bundle.min.js'
+      },
+      {
+        src: 'libs/metismenu/metisMenu.min.js'
+      },
+      {
+        src: 'libs/simplebar/simplebar.min.js'
+      },
+      {
+        src: 'libs/node-waves/waves.min.js'
+      },
+      {
+        src: 'libs/jquery-sparkline/jquery.sparkline.min.js'
+      },
+      {
+        src: 'https://maps.google.com/maps/api/js?key=AIzaSyCtSAR45TFgZjOs4nBFFZnII-6mMHLfSYI'
+      },
+      {
+        src: 'js/app.js'
+      },
+      {
+        // src: 'js/ajax.js'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
