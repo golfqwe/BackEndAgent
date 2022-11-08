@@ -42,7 +42,7 @@
               <div id="progrss-wizard" class="twitter-bs-wizard">
                 <ul class="twitter-bs-wizard-nav nav-justified">
                   <li class="nav-item">
-                    <a href="#progress-information-details" class="nav-link" data-toggle="tab">
+                    <a href="#progress-information-details" class="nav-link active" data-toggle="tab">
                       <span class="step-number">01</span>
                       <span class="step-title">Information</span>
                     </a>
@@ -114,7 +114,7 @@
                   class="tab-content
                                 twitter-bs-wizard-tab-content"
                 >
-                  <div id="progress-information-details" class="tab-pane">
+                  <div id="progress-information-details" class="tab-pane active">
                     <form>
                       <div class="row">
                         <div class="col-lg-6">
@@ -6451,87 +6451,106 @@ export default {
           src: '/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/twitter-bootstrap-wizard/prettify.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/select2/js/select2.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/spectrum-colorpicker2/spectrum.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/admin-resources/bootstrap-filestyle/bootstrap-filestyle.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/libs/bootstrap-maxlength/bootstrap-maxlength.min.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         },
         {
           src: '/js/pages/addnewagent.init.js',
           async: true,
           defer: true,
+          body: true,
           callback: () => { this.$forceUpdate() }
         }
-        // {
-        //   src: '/js/ajax.js',
-        //   async: true,
-        //   defer: true,
-        //   callback: () => { this.$forceUpdate() }
-        // }
       ],
       link: [
         {
           rel: 'stylesheet',
-          href: '/libs/twitter-bootstrap-wizard/prettify.css'
+          href: '/libs/twitter-bootstrap-wizard/prettify.css',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
         },
         {
           rel: 'stylesheet',
-          href: '/libs/select2/css/select2.min.css'
+          href: '/libs/select2/css/select2.min.css',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
         },
         {
           rel: 'stylesheet',
-          href: '/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css'
+          href: '/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
         },
         {
           rel: 'stylesheet',
-          href: '/libs/spectrum-colorpicker2/spectrum.min.css'
+          href: '/libs/spectrum-colorpicker2/spectrum.min.css',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
         },
         {
           rel: 'stylesheet',
-          href: '/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css'
+          href: '/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css',
+          async: true,
+          defer: true,
+          callback: () => { this.$forceUpdate() }
         }
       ]
     }
   }
+
 }
 </script>
 
